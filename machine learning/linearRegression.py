@@ -7,8 +7,6 @@ diabetes = datasets.load_diabetes()
 
 
 diabetes_M = diabetes.data
-#print(diabetes_M)
-#dict_keys(['data', 'target', 'frame', 'DESCR', 'feature_names', 'data_filename', 'target_filename', 'data_module'])
 diabetes_m_train = diabetes_M[:-20]
 diabetes_m_test =  diabetes_M[-20:]
 
@@ -16,6 +14,7 @@ diabetes_n_train = diabetes.target[:-20]
 diabetes_n_test = diabetes.target[-20:]
 
 model = linear_model.LinearRegression()
+
 model.fit(diabetes_m_train, diabetes_n_train)
 diabetes_n_Predicted = model.predict(diabetes_m_test)
 
