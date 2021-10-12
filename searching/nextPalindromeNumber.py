@@ -6,6 +6,7 @@ def reverse(num):
     return reverse
 
 num= int(input("Enter any number :- "))
+
 if num==reverse(num):
     print ("Already palindrome.")
 else:
