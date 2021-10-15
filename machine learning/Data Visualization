@@ -1,0 +1,24 @@
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+data=pd.read_excel("file:///C:/Users/user/Downloads/Training_Images_Data.xlsx")
+data.columns
+
+
+sns.set_style("darkgrid")
+
+sns.countplot(data['No.of dects'],palette="rocket")
+
+
+data['Width'].fillna(data['Width'].median(),inplace=True)
+data['Height'].fillna(data['Height'].median(),inplace=True)
+
+plt.figure(figsize=(10,6))
+plt.subplot(2,2,1)
+sns.distplot(data['Width'])
+
+plt.subplot(2,2,2)
+sns.distplot(data['Height'])
+
+plt.figure(figsize=(10,6))
+data['Defect-name'].value_counts().plot.bar()
