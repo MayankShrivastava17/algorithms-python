@@ -63,6 +63,6 @@ while 1:
         exit()
     if key[32]:
         balls=[]
- 
+
     timepassed=clock.tick(60)/1000.      
     p.display.update()
