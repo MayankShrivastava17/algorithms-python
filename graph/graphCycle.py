@@ -4,12 +4,11 @@ class Graph():
 	def __init__(self,vertices):
 		self.graph = defaultdict(list)
 		self.V = vertices
-
+		
 	def addEdge(self,u,v):
 		self.graph[u].append(v)
 
 	def isCyclicUtil(self, v, visited, recStack):
-
 		visited[v] = True
 		recStack[v] = True
 
@@ -19,7 +18,6 @@ class Graph():
 					return True
 			elif recStack[neighbour] == True:
 				return True
-
 		recStack[v] = False
 		return False
 
