@@ -1,3 +1,5 @@
+# this is a py program for radix sort
+
 def countingSort(arr, exp1):
 	n = len(arr)
 	output = [0] * (n)
@@ -27,9 +29,9 @@ def radixSort(arr):
 n = int(input("Enter the size of array : "))
 arr = list(map(int, input("Enter the array elements :\n").strip().split()))[:n]
 
-print ("Array Before :: ")
+print ("Array Before Sorting:: ")
 print (arr)
 
 radixSort(arr)
-print ("Array After :: ")
+print ("Array After Using Radix Sort :: ")
 print (arr)
